@@ -11,16 +11,15 @@ public class Trem {
     }
 
     public void adicionarVagao(Vagao vagao) {
-
-        if(vagoes.size() < locomotiva.getLimiteVagoes()) {
+        if(vagoes.size() < locomotiva.getLimiteVagoes()){
             vagoes.add(vagao);
+        } else{
+            System.out.println("[Erro] Limite de vagões da locomotiva atingido!");
         }
     }
 
     public void listarVagoes() {
-
         for(Vagao v : vagoes) {
-
             System.out.println("\nVagão de " + v.getTipo());
             v.listar();
         }
