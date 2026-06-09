@@ -10,15 +10,7 @@ public abstract class Vagao {
         itens = new ArrayList<>();
     }
 
-    public boolean embarcar(String item) {
-
-        if(itens.size() < capacidade) {
-            itens.add(item);
-            return true;
-        }
-
-        return false;
-    }
+    public abstract boolean embarcar(String item);
 
     public boolean desembarcar(String item) {
         return itens.remove(item);
